@@ -10,8 +10,8 @@ function permutations(string, result = []) {
     
       permutations(remaining.join('')).map((e)=>{
         let permutation = actual.concat(e);
-        if(!result.includes(permutation)) {
-          
+        if(!result.includes(permutation) && e!=actual) {
+          console.log(e, actual)
           result.push(permutation);
         }
       });
@@ -21,9 +21,9 @@ function permutations(string, result = []) {
   return result;
 }
 
-console.log(permutations("sa"));
+console.log(permutations("ab"));
 console.log(permutations("sas"));
-console.log(permutations("ed"));
+console.log(permutations("ede"));
   
 
 // result = [], current = []) {
